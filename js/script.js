@@ -44,3 +44,18 @@ addBtn.addEventListener('click', function(){
 
 
 })
+
+
+let i = 0;
+
+    while (i < shoppingList.length) {
+        console.log(shoppingList[i]);
+    
+        let shoppingItem = document.createElement('li');
+        shoppingItem.innerHTML = shoppingList[i];
+        shoppingItem.classList.add('list-group-item');
+    
+        listWrapper.append(shoppingItem);
+    
+        i++
+    }
