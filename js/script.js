@@ -40,11 +40,10 @@ addBtn.addEventListener('click', function(){
     
         i++
     }
-    
 
+    document.getElementById('add_shopping_items').value = '';
 
 })
-
 
 let i = 0;
 
