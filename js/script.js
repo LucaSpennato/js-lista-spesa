@@ -8,8 +8,20 @@
 // Ricordiamoci di incrementare il contatore, o comunque di 
 // inserire una condizione di uscita, all'interno ciclo while
 
-const shoppingList = ['pane', 'formaggini', 'uova', 'salame', 'verdurine', 'cioccolato', 'banane']
+let shoppingList = ['pane', 'formaggini', 'uova', 'salame', 'verdurine', 'cioccolato', 'banane']
 
+let inputElement;
+
+
+const addBtn = document.getElementById('addbtn');
+
+
+addBtn.addEventListener('click', function(){
+
+    inputElement = document.getElementById('add_shopping_items').value;
+    console.log(inputElement);
+
+})
 
 let listWrapper = document.querySelector('.list_wrapper');
 console.log(listWrapper);
@@ -21,6 +33,7 @@ while (i < shoppingList.length) {
 
     let shoppingItem = document.createElement('li');
     shoppingItem.innerHTML = shoppingList[i];
+    shoppingItem.classList.add('list-group-item');
 
     listWrapper.append(shoppingItem);
 
